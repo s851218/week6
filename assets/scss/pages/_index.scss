@@ -1,3 +1,195 @@
-.index-title {
-  font-size: 100px;
+// banner
+.bg-banner {
+  background-image: url(/assets/images/banner-sm.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  height: 551px;
+
+  @include laptop {
+    background-image: url(/assets/images/banner.png);
+    height: 621px;
+  }
+}
+
+// 熱門主題
+.theme-card {
+  overflow: hidden;
+  position: relative;
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(33, 37, 41, 0.4);
+    transition: 0.5s;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+}
+
+// 精選文章
+.swiper-pagination {
+  width: 232px;
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 80px;
+    height: 1px;
+    background-color: $gray-400;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .swiper-prev:hover {
+    background: $gray-400;
+    color: #ffff;
+  }
+
+  .swiper-next:hover {
+    background: $gray-400;
+    color: #ffff;
+  }
+}
+
+// 母親節強檔活動
+.hito-content {
+  &::before {
+    content: "";
+    position: absolute;
+    left: 17%;
+    bottom: 0;
+    display: block;
+    width: 217px;
+    height: 76px;
+    background-image: url(/assets/images/bg-1.png);
+
+    @include mobile {
+      display: none;
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    right: 12%;
+    bottom: 0;
+    display: block;
+    width: 300px;
+    height: 190px;
+    background-image: url(/assets/images/bg-2.png);
+
+    @include mobile {
+      right: 0;
+      bottom: 0;
+      width: 160px;
+      height: 104px;
+      background-image: url(/assets/images/bg-2-sm.png);
+    }
+  }
+}
+
+// 大家都在看
+.nav {
+  box-shadow: 0px 2px 8px 0px rgba(110, 107, 103, 0.08);
+
+  .nav-link {
+    color: $gray-600;
+    text-align: start;
+
+    &:hover {
+      color: $accent-200;
+    }
+  }
+
+  .nav-pills .nav-link.active {
+    color: $gray-600;
+    background: $accent-100;
+  }
+}
+
+.tab-pane {
+  .article-link {
+    color: $gray-500;
+    &:hover {
+      color: $accent-200;
+    }
+  }
+
+  .img {
+    li:first-child img {
+      border-radius: 20px 0px 4px 20px;
+
+      @include mobile {
+        border-radius: 4px;
+      }
+    }
+
+    li:nth-child(2) img {
+      border-radius: 4px;
+    }
+
+    li:nth-child(3) img {
+      border-radius: 4px;
+    }
+  }
+
+  li:last-child img {
+    border-radius: 0px 20px 20px 0px;
+  }
+}
+
+.badge {
+  background: $primary-300;
+  &:hover {
+    background-color: $primary-400;
+    color: $white;
+  }
+}
+
+.life {
+  .article-link {
+    color: $gray-500;
+    &:hover {
+      color: $accent-200;
+    }
+  }
+}
+
+// 馬上訂閱
+.bg-text {
+  background: linear-gradient(
+    359.16deg,
+    #212529 0.73%,
+    rgba(33, 37, 41, 0.05) 99.27%
+  );
+}
+
+.project-card {
+  position: relative;
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(33, 37, 41, 0.4);
+    transition: 0.5s;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
 }

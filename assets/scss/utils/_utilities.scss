@@ -1,0 +1,46 @@
+$utilities: map-merge(
+  $utilities,
+  (
+    // font-size RWD
+    "font-size":
+      map-merge(
+        map-get($utilities, "font-size"),
+        (
+          responsive: true,
+        )
+      ),
+    // 熱門主題
+    // 左上圓角
+    "rounded-top-left":
+      (
+        property: border-top-left-radius,
+        class: rounded-top-left,
+        values: (
+          1: $border-radius-xl-1,
+          //20px
+        ),
+      ),
+    // 右下圓角
+    "rounded-bottom-right":
+      (
+        property: border-bottom-right-radius,
+        class: rounded-bottom-right,
+        values: (
+          1: $border-radius-xl-1,
+          //20px
+        ),
+      ),
+    // letter spacing
+    "letter-spacing":
+      (
+        responsive: true,
+        property: letter-spacing,
+        class: ls,
+        values: (
+          wider: 0.05em,
+          widest: 0.1em,
+          none: 0,
+        ),
+      )
+  )
+);

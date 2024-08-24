@@ -1,0 +1,16 @@
+.btn {
+  font-size: $h6-font-size;
+  color: $white;
+  background-color: $accent-200;
+  padding: 12px 20px;
+
+  &:hover {
+    color: $white;
+    background-color: $accent-300;
+  }
+
+  @include laptop {
+    font-size: $h5-font-size;
+    padding: 16px 24px;
+  }
+}

@@ -1,4 +1,58 @@
-<h1 class="header">我是 header</h1>
-<a href="index.html">index</a>
-<a href="about.html">about</a>
-<a href="contact.html">contact</a>
+<div class="container">
+  <nav class="navbar navbar-expand-lg py-9">
+    <div class="container-fluid">
+      <h1>
+        <a class="logo me-9" href="#">Vivre</a>
+      </h1>
+
+      <!-- search end -->
+      <!-- mobile toggler -->
+      <a
+        href="#"
+        class="navbar-toggler border-0"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="bi bi-list"></i>
+      </a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- search -->
+        <div class="input-group mt-lg-0 mt-6">
+          <label class="input-group-text search-text ps-5" for="search"
+            >搜尋文章</label
+          >
+          <input
+            class="form-control border-0 ps-0"
+            id="search"
+            type="search"
+            aria-label="Search"
+          />
+          <a class="input-group-text pe-5" href="#"
+            ><i class="bi bi-search text-secondary-200"></i
+          ></a>
+        </div>
+        <ul
+          class="navbar-nav align-items-center ms-lg-auto mt-6 mt-lg-0 gap-lg-5 gap-6"
+        >
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">所有文章</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">訂閱方案</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"> 關於我們 </a>
+          </li>
+          <li>
+            <a class="btn text-white btn-secondary-200 py-4 px-6 w-100" href="#"
+              >登入 / 註冊</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
