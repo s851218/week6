@@ -1,0 +1,13 @@
+.bg-about-banner {
+  background-image: url(/assets/images/about-banner-sm.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  height: 240px;
+
+  @include laptop {
+    background-image: url(/assets/images/about-banner.png);
+    height: 454px;
+  }
+}

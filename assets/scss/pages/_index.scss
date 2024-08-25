@@ -165,6 +165,12 @@
   }
 }
 
+.img-100 {
+  @include mobile {
+    width: 100%;
+  }
+}
+
 // 馬上訂閱
 .bg-text {
   background: linear-gradient(
